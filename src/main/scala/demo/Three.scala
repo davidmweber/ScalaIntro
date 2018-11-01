@@ -15,9 +15,7 @@ class Basic(i: Int, name: String) { // private attributes
 object Three {
 
   def main(args: Array[String]): Unit = {
-
     val b = new Basic(1,"One")
     println(b.getName, b.doubleI) // ("One", 2)
-
   }
 }

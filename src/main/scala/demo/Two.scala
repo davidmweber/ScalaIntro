@@ -14,11 +14,7 @@ object Two {
   // bar = "123" // Compiler error: bar is an Int
 
   // Everything is an expression
-  val thingOne = if (foo > 300) {
-    "Biggish"
-  } else {
-    "Midget"
-  }
+  val thingOne = if (foo > 300) "Biggish" else "Midget"
   println(thingOne) // "Midget"
 
   val thingTwo = {
@@ -47,8 +43,10 @@ object Two {
   }
   println(b) // 0
 
+  lazy val dave = List("mad", "scala", "fanboy") // Constructor called only when it is first used
+
   def main(args: Array[String]): Unit = {
-    // What did Dave do here ?!!
+    println(dave)
   }
 
 }

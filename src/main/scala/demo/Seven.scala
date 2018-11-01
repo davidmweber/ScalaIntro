@@ -12,7 +12,8 @@ abstract class Try[+T] // We will never instantiate a Try.
 
 // Scala's way of building a constructor for a Try. Think of this as a Try factory
 // It attempts to evaluate the "pass by name" expression and rolls up the result into
-// the Try (Success if it works, Failure if it throws)_.
+// the Try (Success if it works, Failure if it throws). It is called a companion
+// class
 object Try {
   // The pass by name parameter is only evaluated when used....
   def apply[T](r: ⇒ T): Try[T] = {
@@ -22,8 +23,8 @@ object Try {
   }
 }
 
-case class Success[+T](value: T) extends Try[T] // Our success wrapper
-case class Failure[+T](exception: Throwable) extends Try[T]
+case class Success[+T](value: T) extends Try[T]             // Our success wrapper
+case class Failure[+T](exception: Throwable) extends Try[T] // Not so successful
 
 object Seven {
   def main(args: Array[String]): Unit = {
@@ -38,12 +39,10 @@ object Seven {
     }
 
     val strs = List("123", "234", "-123", "aa") // A Vodacom acceptable list of integers
-
     println(strs.map(s ⇒ Try(s.toInt)))
 
     // Or just go the full Monty on functional
     val ints = strs.map(s ⇒ Try(s.toInt)).collect{ case Success(i) ⇒ i }
     println(ints) // List(123, 234, -123)
-
   }
 }

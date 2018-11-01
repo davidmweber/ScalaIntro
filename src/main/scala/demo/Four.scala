@@ -1,10 +1,11 @@
 package demo
 
 case class BetterBasic(i: Int, name: String) {
-  val doubleI = 2 * i   // Evaluates the expression once
-  def doubleEye = 2 * i // Evaluates the expression each time it is called
+  val doubleI: Int = 2 * i   // Evaluates the expression once
+  def doubleEye: Int = 2 * i // Evaluates the expression each time it is called
 }
 
+// Companion objects are like Java classes with only static methods
 object BetterBasic { // Companion object to BetterBasic case class
   def apply(i: Int): BetterBasic = i match {
     case 0 ⇒ BetterBasic(i,"Zero")
