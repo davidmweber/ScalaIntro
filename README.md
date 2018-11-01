@@ -7,8 +7,8 @@ Type `run` at the prompt to see the available main classes to run.
 
 Here are some resources to get you started:
 
-#. Scala's [Getting Started page](https://docs.scala-lang.org/getting-started.html)
-#. You can test short programs using [scastie](https://scastie.scala-lang.org/), an interactive playground for Scala
-#. The Scala library's [API documentation](https://www.scala-lang.org/api/current/)
+* Scala's [Getting Started page](https://docs.scala-lang.org/getting-started.html)
+* You can test short programs using [scastie](https://scastie.scala-lang.org/), an interactive playground for Scala
+* The Scala library's [API documentation](https://www.scala-lang.org/api/current/)
 
 There are many IDEs (VSCode, Atom, IntelliJ IDEA and emacs) to choose from. Good luck.
