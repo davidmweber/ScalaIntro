@@ -1,6 +1,3 @@
-/*
- * Copyright © ${year} 8eo Inc.
- */
 package demo
 
 // More fun with functions
@@ -15,4 +12,7 @@ object Five {
   println(t.map(cube)) // Cube
   println(t.map(_ * 2)) // Short cut for x => x * 2
 
+  def main(args: Array[String]): Unit = { // Same as Java class with static public main....
+    println("Hello World!")
+  }
 }

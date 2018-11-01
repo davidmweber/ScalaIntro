@@ -4,7 +4,6 @@
  * and roll it up into a wrapper for the detritus. Else just wrap the result in
  * a Success.
  */
-
 package demo
 
 import scala.util.control.NonFatal

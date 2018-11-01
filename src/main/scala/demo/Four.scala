@@ -1,8 +1,4 @@
-/*
- * Copyright © ${year} 8eo Inc.
- */
 package demo
-
 
 case class BetterBasic(i: Int, name: String) {
   val doubleI = 2 * i   // Evaluates the expression once
@@ -26,4 +22,7 @@ object Four {
   val bb2 = BetterBasic(4) // Calls apply method in BetterBasic object
   println(bb2) // BetterBasic(4, "Many")
 
+  def main(args: Array[String]): Unit = { // Same as Java class with static public main....
+    println("Hello World!")
+  }
 }

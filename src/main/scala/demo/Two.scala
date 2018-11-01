@@ -1,6 +1,5 @@
 package demo
 
-
 // Expressions
 object Two {
 
