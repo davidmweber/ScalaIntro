@@ -10,5 +10,7 @@ Here are some resources to get you started:
 * Scala's [Getting Started page](https://docs.scala-lang.org/getting-started.html)
 * You can test short programs using [scastie](https://scastie.scala-lang.org/), an interactive playground for Scala
 * The Scala library's [API documentation](https://www.scala-lang.org/api/current/)
+* Some 99 problem inspired functional [puzzles](https://github.com/davidmweber/puzzle_time) 
+  and their [solutions](https://github.com/davidmweber/puzzle_solutions) for your entertainment,
 
 There are many IDEs (VSCode, Atom, IntelliJ IDEA and emacs) to choose from. Good luck.
