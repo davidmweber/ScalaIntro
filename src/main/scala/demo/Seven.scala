@@ -13,7 +13,8 @@ abstract class Try[+T] // We will never instantiate a Try.
 // Scala's way of building a constructor for a Try. Think of this as a Try factory
 // It attempts to evaluate the "pass by name" expression and rolls up the result into
 // the Try (Success if it works, Failure if it throws). It is called a companion
-// class
+// class. Basically, Try(something) is syntactic sugar for Try.apply(something). All
+// methods in an object are equivalent to Java's static methods.
 object Try {
   // The pass by name parameter is only evaluated when used....
   def apply[T](r: ⇒ T): Try[T] = {
@@ -44,5 +45,11 @@ object Seven {
     // Or just go the full Monty on functional
     val ints = strs.map(s ⇒ Try(s.toInt)).collect{ case Success(i) ⇒ i }
     println(ints) // List(123, 234, -123)
+
+    // Some compound statement
+    val r = Try {
+      println("Executed in Try apply method because this parameter is pass by name")
+      "1234".toInt
+    }
   }
 }
