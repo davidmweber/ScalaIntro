@@ -4,7 +4,7 @@ package demo
 object Five {
 
   val square: Double ⇒ Double = (x: Double) ⇒ x * x
-  val cube = (x: Double) ⇒ x * x * x
+  val cube = (x: Double) ⇒ x * square(x)
   println(square(3), cube(3))
 
   val t = List(1.0, 2.0, 3.0)
