@@ -9,6 +9,7 @@ package demo
   * @param y Y coordinate
   */
 case class Coord(x: Double, y: Double) {
+
   /**
     * Addition operator which allows operations like this:
     * {{{
@@ -22,6 +23,7 @@ case class Coord(x: Double, y: Double) {
   * Base class for all shapes
   */
 sealed trait Shape {
+
   /**
     * Shapes can generate a spatially translated version of themselves
     * @param t The translation value
@@ -58,21 +60,22 @@ case class Polygon(vertices: List[Coord]) extends Shape {
 object Six {
 
   // Heterogeneous list of shapes
-  val shapes = List(
+  val shapes = List[Shape](
     Point(Coord(0.0, 1.0)),
-    Circle(Coord(1.0,1.0), 1.0),
-    Polygon(List(Coord(1.0,1.0), Coord(2.0,2.0), Coord(1.0, 2.0)))
+    Circle(Coord(1.0, 1.0), 1.0),
+    Polygon(List(Coord(1.0, 1.0), Coord(2.0, 2.0), Coord(1.0, 2.0)))
   )
 
   def main(args: Array[String]): Unit = {
 
-    shapes.foreach{ // Pattern matching FTW!
-      case Point(c)     ⇒ println(s"Point at (${c.x}, ${c.y})")
-      case Circle(c, r) ⇒ println(s"Circle at (${c.x}, ${c.y}) with radius $r")
-      case Polygon(v)   ⇒ println(s"Polygon with ${v.length} vertices")
+    shapes.foreach { // Pattern matching FTW!
+      case Point(c)     => println(s"Point at (${c.x}, ${c.y})")
+      case Circle(c, r) => println(s"Circle at (${c.x}, ${c.y}) with radius $r")
+      case Polygon(v)   => println(s"Polygon with ${v.length} vertices")
     }
 
     println(shapes)
+    // Translate the position of all the shapes in the list
     println(shapes.map(_.translate(Coord(1.0, 1.0))))
   }
 }
