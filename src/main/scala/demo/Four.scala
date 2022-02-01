@@ -15,15 +15,12 @@ object BetterBasic { // Companion object to BetterBasic case class
   }
 }
 
-object Four {
+@main def four() =
 
   val bb = BetterBasic(1, "One")
-  println(bb.i, bb.name, bb.doubleI, bb.doubleEye)
+  println(s"${bb.i}, ${bb.name}, ${bb.doubleI}, ${bb.doubleEye}")
 
   val bb2 = BetterBasic(4) // Calls apply method in BetterBasic object
   println(bb2) // BetterBasic(4, "Many")
 
-  def main(args: Array[String]): Unit = { // Same as Java class with static public main....
-    println("Hello World!")
-  }
-}
+  println("Hello World!")

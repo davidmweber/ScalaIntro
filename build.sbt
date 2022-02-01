@@ -1,3 +1,3 @@
 name := "ScalaIntro"
-version := "0.1"
-scalaVersion := "2.12.7"
+version := "0.2"
+scalaVersion := "3.1.0"

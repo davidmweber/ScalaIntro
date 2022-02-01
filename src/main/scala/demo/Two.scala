@@ -1,7 +1,7 @@
 package demo
 
 // Expressions
-object Two {
+@main def two() =
 
   // Vals and vars...
   val foo = 3
@@ -45,11 +45,8 @@ object Two {
 
   lazy val dave = List("mad", "scala", "fanboy") // Constructor called only when it is first used
 
-  def main(args: Array[String]): Unit = {
-    println(dave)
-  }
+  println(dave)
 
-}
 
 
 
